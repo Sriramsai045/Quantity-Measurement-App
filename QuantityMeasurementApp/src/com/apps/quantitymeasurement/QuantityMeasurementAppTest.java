@@ -19,7 +19,7 @@ public class QuantityMeasurementAppTest {
         assertEquals(3.0, result.convertTo(
                 QuantityMeasurementApp.LengthUnit.FEET).convertTo(
                 QuantityMeasurementApp.LengthUnit.FEET).convertTo(
-                QuantityMeasurementApp.LengthUnit.FEET).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.FEET).getValue(), EPSILON);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(12.0, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.INCHES).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.INCHES).getValue(), EPSILON);
     }
 
     @Test
@@ -45,7 +45,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(2.0, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.FEET).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.FEET).getValue(), EPSILON);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(24.0, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.INCHES).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.INCHES).getValue(), EPSILON);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(2.0, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.YARDS).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.YARDS).getValue(), EPSILON);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(5.08, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.CENTIMETERS).value, 1e-2);
+                QuantityMeasurementApp.LengthUnit.CENTIMETERS).getValue(), 1e-2);
     }
 
     @Test
@@ -97,7 +97,7 @@ public class QuantityMeasurementAppTest {
         var r1 = q1.add(q2).convertTo(QuantityMeasurementApp.LengthUnit.FEET);
         var r2 = q2.add(q1).convertTo(QuantityMeasurementApp.LengthUnit.FEET);
 
-        assertEquals(r1.value, r2.value, EPSILON);
+        assertEquals(r1.getValue(), r2.getValue(), EPSILON);
     }
 
     @Test
@@ -110,7 +110,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(5.0, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.FEET).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.FEET).getValue(), EPSILON);
     }
 
     @Test
@@ -123,7 +123,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(3.0, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.FEET).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.FEET).getValue(), EPSILON);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -144,7 +144,7 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(2e6, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.FEET).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.FEET).getValue(), EPSILON);
     }
 
     @Test
@@ -157,6 +157,6 @@ public class QuantityMeasurementAppTest {
         var result = q1.add(q2);
 
         assertEquals(0.003, result.convertTo(
-                QuantityMeasurementApp.LengthUnit.FEET).value, EPSILON);
+                QuantityMeasurementApp.LengthUnit.FEET).getValue(), EPSILON);
     }
 }
